@@ -1,0 +1,180 @@
+<html>
+    <head>
+        <style>
+        </style>
+        <script>
+               function txtfocus1()
+            {
+                document.getElementById("userid").style.background="powderblue";
+                document.getElementById("userid").style.color="black";
+            }
+
+            function focuslost1()
+            {
+                document.getElementById("userid").style.background="powderblue";
+                document.getElementById("userid").style.color="black";
+            }
+            
+
+            function txtfocus2()
+            {
+                document.getElementById("password").style.background="powderblue";
+                document.getElementById("password").style.color="black";
+            }
+
+            function focuslost2()
+            {
+                document.getElementById("password").style.background="powderblue";
+                document.getElementById("password").style.color="black";
+            }
+
+
+            function txtfocus3()
+            {
+                document.getElementById("name").style.background="powderblue";
+                document.getElementById("name").style.color="black";
+            }
+
+            function focuslost3()
+            {
+                document.getElementById("name").style.background="powderblue";
+                document.getElementById("name").style.color="black";
+            }
+
+
+            function txtfocus4()
+            {
+                document.getElementById("name1").style.background="powderblue";
+                document.getElementById("name1").style.color="black";
+            }
+
+            function focuslost4()
+            {
+                document.getElementById("name1").style.background="powderblue";
+                document.getElementById("name1").style.color="black";
+            }
+
+
+            function txtfocus5()
+            {
+                document.getElementById("name2").style.background="powderblue";
+                document.getElementById("name2").style.color="black";
+            }
+
+            function focuslost5()
+            {
+                document.getElementById("name2").style.background="powderblue";
+                document.getElementById("name2").style.color="black";
+            }
+
+
+            function txtfocus6()
+            {
+                document.getElementById("country").style.background="powderblue";
+                document.getElementById("country").style.color="black";
+            }
+
+            function focuslost6()
+            {
+                document.getElementById("country").style.background="powderblue";
+                document.getElementById("country").style.color="black";
+            }
+
+
+            function txtfocus7()
+            {
+                document.getElementById("mobile").style.background="powderblue";
+                document.getElementById("mobile").style.color="black";
+            }
+
+            function focuslost7()
+            {
+                document.getElementById("mobile").style.background="powderblue";
+                document.getElementById("mobile").style.color="black";
+            }
+
+
+            function txtfocus8()
+            {
+                document.getElementById("email").style.background="powderblue";
+                document.getElementById("email").style.color="black";
+            }
+
+            function focuslost8()
+            {
+                document.getElementById("email").style.background="powderblue";
+                document.getElementById("email").style.color="black";
+            }
+
+
+            function validateForm()
+            {
+                var a1=document.forms["myform"]["userid"].value;
+                var a2=document.forms["myform"]["password"].value;
+
+                var errormes1 = document.getElementById("error1");
+                var errormes2 = document.getElementById("error2");
+
+
+                if(((a1.length)<5) || ((a1.length)>30))
+                {
+                    errormes1.textContent="User-id must be between 5 to 30 character";
+                    errormes1.style.color="Red";
+                    return false;
+                }
+                else
+                {
+                    errormes1.textContent="";
+                }
+
+                if(password.length < 8)
+                {
+                    erroemes2.textcontent="Password Should be at least 8 characters";
+                }
+                else if(!/A-Z/.test(password) || !/a-z/.test(password) || !/\d/.test(password) )
+                {
+                    erroemes2.textcontent="Password should contain at least one uppercase,one lowercase,and one digit";
+                }
+                else
+                {
+                    if((a1.length)<5) || ((a1.length)>8)
+                    {
+                        erroemes2.textcontent="Incorrect Password";
+                        erroemes2.style.color="red";
+                        return false; 
+                    }
+                    else
+                    {
+                        erroemes2.textcontent="";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+            <form name="myform" onsubmit="return validateForm()" thord="post">
+                <div class="container">
+                <center><h1>LUXARY AUTOS</h1></center>
+                <hr>
+                <label><b>User-id :</b></label></br></br>
+                    <input type="text" name="userid" placeholder="Enter your User-id" size="50" id="userid" onfocus="txtfocus1()" onblur="focuslost1()"/><p id="error1"></p>
+                <label><b>Password :</b><label></br></br>
+                    <input type="text" name="Password" placeholder="Enter your password" size="50" id="password" onfocus="txtfocus2()" onblur="focuslost2()"/><p id="error2"></p>
+                <label><b> First Name :</b></label>
+                <label style="margin-left:183px"><b> Middle Name :</b></label>
+                <label style="margin-left:170px"><b> Last Name :</b></label> </br></br>
+                    <input type="text" name="Name" placeholder="Enter your Name" size="35" id="name" onfocus="txtfocus3()" onblur="focuslost3()"/>
+                    <input type="text" name="Name" placeholder="Enter your Name" size="35" id="name1" onfocus="txtfocus4()" onblur="focuslost4()"/>
+                    <input type="text" name="Name" placeholder="Enter your Name" size="35" id="name2" onfocus="txtfocus5()" onblur="focuslost5()"/></br></br>
+                <label><b>Current Address : </b><label></br></br>
+                    <textarea cols="50" rows="6" placeholder="Enter Your Address here"></textarea></br></br>
+                <label><b>Country :</b></label></br></br>
+                    <input type="text" name="Country" placeholder="Enter your Country Name" size="50" id="country" onfocus="txtfocus6()" onblur="focuslost6()"/></br></br>
+                <label><b>Mobile Number :</b></label></br></br>
+                    <input type="text" name="Mobile" placeholder="Enter your Mobile" size="50" id="mobile" onfocus="txtfocus7()" onblur="focuslost7()"/></br></br>
+                <label><b>E-Mail :</b></label></br></br>
+                    <input type="text" name="E-Mail" placeholder="Enter your E-Mail" size="50" id="email" onfocus="txtfocus8()" onblur="focuslost8()"/></br></br>
+                <button onClick="submit" size="30">SUBMIT</button>
+            </form>
+    </body>
+</html>
